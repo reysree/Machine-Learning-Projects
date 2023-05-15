@@ -1,0 +1,8 @@
+Implement AdaBoost using decision stumps learned using the Gini index as the weak learners. Apply this to the dataset on Miner -- this is an encoding of the problem of recognizing handwritten digits, specialized to distinguishing between the digits 3 and 5 (this is the NIST dataset originally collected by Yann LeCun). The first column in the training dataset is the label, and each feature that follows is a pixel encoding. Since these are continuous features, it is OK if your decision stump implementation works for only continuous features.
+
+As usual, you can estimate your test error on Miner (restricted to 10 times in a 24 hour period). Run AdaBoost for at least 200 rounds (or more if you want). Also, estimate test error using a single decision tree learned using any library you wish, without any pruning.  
+
+In your report, plot a graph with number of rounds of boosting on the X axis, error on the Y axis, and both the training set error (unweighted) and the estimated test set error for AdaBoost. You can run multiple times and take the average to smooth out the curves. Also add a single line on this graph that shows the estimated test set error of the single decision tree.
+
+Summarize and interpret your results. Discuss the behavior of both the training set error and the test set error (including possible overfitting concerns) as you increase the number of rounds. What do you learn from the comparison with the single decision tree? 
+
