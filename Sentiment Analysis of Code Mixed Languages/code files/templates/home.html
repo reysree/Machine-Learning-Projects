@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>
+    Sentiment Anaysis
+  </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    input[type=text],
+    select {
+      width: 95%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      width:20%;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+      font-size: 16px;
+      width:20%;
+    }
+
+    div {
+      border-radius: 10px;
+      background-color:white ;
+      padding: 20px;
+      width: 80%;
+      margin-top: 4%;
+      margin-left : 10%;
+    }
+  </style>
+</head>
+
+<body style="background-color:#f2f2f2;"><br>
+  <div>
+  <h1 style="text-align: center"> Sentiment Analysis </h1><hr><br>
+  <form method="POST">
+    <h3>Enter any sentence which is a mix of Hindi and English : </h3>
+    <center><input type="text" name="name" placeholder="Enter a code mixed sentence">
+    <input type="submit" value="Submit"></center>
+  </form>
+  
+  </div><br/>
+  <img src="{{url_for('static', filename='left_corner_pic.jpg')}}" alt="Sentimental Analysis" align="right"width="40%" height="36%">
+</body>
+
+</html>
+

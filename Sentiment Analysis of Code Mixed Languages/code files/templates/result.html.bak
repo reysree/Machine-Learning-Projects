@@ -1,0 +1,24 @@
+<html>
+   <head>
+      <title>Sentiment Analysis Score</title>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/result.css') }}">
+
+   </head>
+   
+<body>
+   <h1 style="text-align: center;">Sentimental Analysis of Code Mixed Languages</h1><br>
+   <h1>Sentiment score of the sentence "{{result}}" is</h1>
+   <ul>
+      <li>
+         <progress max="100" value={{result}} class="html5">
+            <div class="progress-bar">
+               <span style="width: 80%">This is BAR</span>
+            </div>
+          </progress>
+      </li>
+   </ul>
+   <br>
+   <h1> {{ result }} </h1>
+</body>
+
+</html>

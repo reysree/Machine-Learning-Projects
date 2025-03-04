@@ -1,0 +1,56 @@
+<html>
+
+<head>
+   <title>Sentiment Analysis Score</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <script>
+      window.onload = function () {
+         var barContainer = document.getElementById("barContainer")
+         var resultSentence = document.getElementById("resultSentence")
+         var result2 = {{ result }}
+         console.log(typeof result2)
+         if(result2 > 20){
+            resultSentence.innerHTML = "<h3>The sentiment of the given sentence is <i>POSITIVE</i></h3><h3>The percentage of Positivity is:</h3>"
+            barContainer.innerHTML = "<div style='align-items: center'><div class='progress-bar progress-bar-success progress-bar-striped' role='progressbar' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100' style='width:" + result2 + "%';align-content: center>"+result2+"%</div></div>"  
+         }
+         else if(result2 < 0){
+            result2 = -result2
+            resultSentence.innerHTML = "<h3>The sentiment of the given sentence is <i>NEGATIVE</i></h3><h3>The percentage of Negativity is:</h3>"
+            barContainer.innerHTML = "<div style='align-items: center'><div class='progress-bar progress-bar-danger progress-bar-striped' role='progressbar' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100' style='width:" + result2 + "%';align-content: center>"+result2+"%</div></div>"  
+         }
+         else{
+            result2 = 100 - result2
+            resultSentence.innerHTML = "<h3>The sentiment of the given sentence is <i>NUETRAL</i></h3><h3>The percentage of Nuetrality is:</h3>"
+            barContainer.innerHTML = "<div style='align-items: center'><div class='progress-bar progress-bar-info progress-bar-striped' role='progressbar' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100' style='width:" + result2 + "%';align-content: center>"+result2+"%</div></div>"
+         }
+      }
+
+   </script>
+    <style>
+        .div1 {
+      border-radius: 10px;
+      background-color:white ;
+      padding: 20px;
+      width: 80%;
+      margin-top: 4%;
+      margin-left : 10%;
+    }
+        
+    </style>
+</head>
+
+<body style="background-color:#f2f2f2;">
+   
+      <div class="div1">
+         <h1 style="text-align: center">Sentimental Analysis of Code Mixed Languages</h1><hr><br/>
+         <div id = "resultSentence"></div>
+         <div id="barContainer" class="progress"></div> <br/>
+      </div>
+ 
+</body>
+
+</html>
